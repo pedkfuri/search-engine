@@ -1,10 +1,10 @@
-() - testes
+ok - testes
 ok - makefile (testes)
 () - documentação (falta incluir os testes e baixar pdf)
 -------------
-() - criar repositorio aberto e subir pro github
+ok - criar repositorio aberto e subir pro github
 -------------
-() - consertar testes 
+ok - consertar testes 
 -------------
 =============
 -------------
