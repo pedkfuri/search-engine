@@ -1,0 +1,25 @@
+() - testes
+ok - makefile (testes)
+() - documentação (falta incluir os testes e baixar pdf)
+-------------
+() - criar repositorio aberto e subir pro github
+-------------
+() - consertar testes 
+-------------
+=============
+-------------
+ok - makefile
+-------------
+implementação:
+ok - busca
+ok - consulta
+ok - coordenada
+ok - documento
+ok - indInvertido
+ok - leArquivos
+ok - palavra
+-------------
+ok - tirar as bibliotecas desnecessárias
+ok - Configurar display no terminal
+-------------
+ok - consertar ranking com construtor da consulta
