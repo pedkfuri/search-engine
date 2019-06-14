@@ -3,6 +3,7 @@
 #include "../include/doctest.h"
 #include "../include/files.h"
 #include "../include/doc.h"
+#include "../include/coord.h"
 
 #include <iostream>
 #include <vector>
@@ -36,5 +37,25 @@ TEST_SUITE("Doc"){
 		vector<Doc> docs = {Doc("doc1"), Doc("doc2")};
 		vector<string> names = {"doc1", "doc2"};
 		CHECK(Doc::getDocsNames(docs) == names);
+	}
+}
+
+TEST_SUITE("Coord"){
+	TEST_CASE("getPos"){
+		Coord c1;
+		Term t1("Casa");
+		c1.addPos(t1, 1);
+		map<Term, double> coord;
+
+		coord[t1] = 1;
+
+		CHECK(c1.getPos()[t1] == 1);
+	}
+
+	TEST_CASE("addPos"){
+		Coord c1;
+		Term t1("Casa");
+		c1.addPos(t1, 1);
+		CHECK(c1.getPos()[t1] == 1);
 	}
 }
