@@ -1,6 +1,6 @@
 ok - testes
 ok - makefile (testes)
-() - documentação (falta incluir os testes e baixar pdf)
+ok - documentação (falta incluir os testes e baixar pdf)
 -------------
 ok - criar repositorio aberto e subir pro github
 -------------
