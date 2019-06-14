@@ -34,7 +34,7 @@ class Doc {
 
 		int getOccsTerm(Term term);
 
-		static vector<string> getDocsNames(list<Doc> docs);
+		static vector<string> getDocsNames(vector<Doc> docs);
 
 		friend class Index;
 

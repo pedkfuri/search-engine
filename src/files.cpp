@@ -2,11 +2,11 @@
 
 using namespace std;
 
-list<Doc> Files::readFiles() {
+vector<Doc> Files::readFiles() {
 	DIR *dir = NULL;
     dirent *file = NULL;
     dir = opendir("docs/"); //diretório de todos os documentos
-    list<Doc> docs;
+    vector<Doc> docs;
 
     if(dir == NULL) {
     	cout << "Não foi possível acessar o diretório de documentos. Experimente trocar o nome da pasta com dataset para \"docs\"." << endl;
@@ -25,7 +25,7 @@ list<Doc> Files::readFiles() {
     return docs;
 }
 
-void Files::getTerms(list<Doc>& docs, Index& index) {
+void Files::getTerms(vector<Doc>& docs, Index& index) {
 	for (Doc& doc : docs) {
 		ifstream file;
 		file.open("docs/" + doc.getDocName());

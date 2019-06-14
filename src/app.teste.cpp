@@ -2,11 +2,11 @@
 
 #include "../include/doctest.h"
 #include "../include/files.h"
+#include "../include/doc.h"
 
 #include <iostream>
-#include <algorithm>
-#include <limits>
-#include <cmath>
+#include <vector>
+#include <string>
 
 using namespace std;
 
@@ -23,6 +23,18 @@ TEST_SUITE("Input"){
 		CHECK(w1 == "casa");
 		CHECK(w2 == "guardachuvas");
 		CHECK(w3 == "casa");
+	}
+}
 
+TEST_SUITE("Doc"){
+	TEST_CASE("getDocName"){
+		Doc doc1("doc1");
+		CHECK(doc1.Doc::getDocName() == "doc1");
+	}
+
+	TEST_CASE("getDocsNames"){
+		vector<Doc> docs = {Doc("doc1"), Doc("doc2")};
+		vector<string> names = {"doc1", "doc2"};
+		CHECK(Doc::getDocsNames(docs) == names);
 	}
 }

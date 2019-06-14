@@ -70,12 +70,12 @@ void SearchEngine::calcDocsSim() {
 			sumQueryPos += pow(query_.getCoord()[termPos.first], 2);
 		}
 		denom += sqrt(sumDocPos) * sqrt(sumQueryPos);
-		doc.setSim(num/denom);
+		doc.setSim(denom == 0 ? 0 : num/denom);
 	}
 }
 
 void SearchEngine::sortDocs() {
-	this->docs_.sort([](const Doc& d1, const Doc& d2) { return d1.getSim() > d2.getSim(); });
+	sort(docs_.begin(), docs_.end(), [](const Doc& d1, const Doc& d2) { return d1.getSim() > d2.getSim(); });
 }
 
 SearchEngine::~SearchEngine() {

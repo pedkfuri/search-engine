@@ -40,7 +40,7 @@ int Doc::getOccsTerm(Term term) {
 	return this->terms_[term];
 }
 
-vector<string> Doc::getDocsNames(list<Doc> docs) {
+vector<string> Doc::getDocsNames(vector<Doc> docs) {
 	vector<string> names;
 
 	for (Doc& doc : docs) {

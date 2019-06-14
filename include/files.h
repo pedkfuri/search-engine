@@ -13,9 +13,9 @@ using namespace std;
 
 namespace Files {
 
-	list<Doc> readFiles();
+	vector<Doc> readFiles();
 
-	void getTerms(list<Doc>& docs, Index& index);
+	void getTerms(vector<Doc>& docs, Index& index);
 
 	void normalizeTerm(string& term);
 	

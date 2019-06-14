@@ -33,7 +33,7 @@ class SearchEngine {
 	private: 
 		Index index_;
 
-		list<Doc> docs_;
+		vector<Doc> docs_;
 
 		Coord defCoord_;
 		
